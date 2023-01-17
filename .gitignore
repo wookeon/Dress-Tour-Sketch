@@ -1,0 +1,78 @@
+# Created by https://www.gitignore.io/api/git,xcode,swift,macos,carthage,cocoapods
+# Edit at https://www.gitignore.io/?templates=git,xcode,swift,macos,carthage,cocoapods
+
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two
+Icon
+
+# Thumbnails
+._*
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## User settings
+xcuserdata/
+
+## Xcode Patch
+*.xcodeproj
+*.xcworkspace
+*.xcworkspace/*
+/*.gcno
+
+### Xcode Patch ###
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+### Tuist derived files ###
+graph.dot
+graph.png
+Derived/
+
+### Tuist dependencies ###
+Tuist/Dependencies/graph.json
+Tuist/Dependencies/Carthage/
+Tuist/Dependencies/SwiftPackageManager/
