@@ -24,6 +24,8 @@
 		56898CD52976DB8300AF1D62 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 56898CD42976DB8300AF1D62 /* ReactorKit */; };
 		56898CD82976DB9100AF1D62 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 56898CD72976DB9100AF1D62 /* Then */; };
 		56898CDB2976DBA000AF1D62 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 56898CDA2976DBA000AF1D62 /* SnapKit */; };
+		56898CE12977FAD900AF1D62 /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56898CE02977FAD900AF1D62 /* UIView+Preview.swift */; };
+		56898CE32977FB1A00AF1D62 /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56898CE22977FB1A00AF1D62 /* UIViewController+Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		56898CAF2976D44500AF1D62 /* colorlesspoint.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = colorlesspoint.vsh; sourceTree = "<group>"; };
 		56898CB02976D44500AF1D62 /* stencil.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = stencil.fsh; sourceTree = "<group>"; };
 		56898CB12976D44500AF1D62 /* quad.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = quad.vsh; sourceTree = "<group>"; };
+		56898CE02977FAD900AF1D62 /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
+		56898CE22977FB1A00AF1D62 /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 		56898CBB2976D67D00AF1D62 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				56898CDF2977FACB00AF1D62 /* Preview */,
 				56898C952976D32700AF1D62 /* AppDelegate.swift */,
 				56898CBD2976D6E400AF1D62 /* Scenes */,
 			);
@@ -149,6 +154,15 @@
 				56898C992976D32700AF1D62 /* SketchViewController.swift */,
 			);
 			path = Sketch;
+			sourceTree = "<group>";
+		};
+		56898CDF2977FACB00AF1D62 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				56898CE02977FAD900AF1D62 /* UIView+Preview.swift */,
+				56898CE22977FB1A00AF1D62 /* UIViewController+Preview.swift */,
+			);
+			path = Preview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +255,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56898CE12977FAD900AF1D62 /* UIView+Preview.swift in Sources */,
+				56898CE32977FB1A00AF1D62 /* UIViewController+Preview.swift in Sources */,
 				56898C9A2976D32700AF1D62 /* SketchViewController.swift in Sources */,
 				56898C962976D32700AF1D62 /* AppDelegate.swift in Sources */,
 			);
