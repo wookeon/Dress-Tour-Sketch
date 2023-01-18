@@ -113,7 +113,14 @@ final class SettingView: UIView {
         super.init(frame: frame)
         
         self.setup()
-        self.setConstraints()
+        switch UIDevice.current.userInterfaceIdiom {
+        case .pad:
+            self.setConstraintsForPad()
+        case .phone:
+            self.setConstraintsForPhone()
+        default:
+            break
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -148,7 +155,78 @@ final class SettingView: UIView {
         self.addSubview(self.maxWidthControl)
     }
     
-    private func setConstraints() {
+    private func setConstraintsForPad() {
+        self.pressureVSVelocityControl.snp.remakeConstraints { make in
+            make.top.equalToSuperview().offset(20)
+            make.leading.equalToSuperview().offset(15)
+        }
+        
+        self.colorStackView.snp.remakeConstraints { make in
+            make.top.equalToSuperview().offset(20)
+            make.leading.equalTo(self.pressureVSVelocityControl.snp.trailing).offset(22)
+        }
+        [self.blackButton, self.redButton, self.greenButton, self.blueButton].forEach {
+            $0.snp.remakeConstraints { make in
+                make.size.equalTo(32)
+            }
+        }
+        
+        self.minAlphaTitleLabel.snp.remakeConstraints { make in
+            make.top.equalTo(self.pressureVSVelocityControl.snp.bottom).offset(31)
+            make.leading.equalToSuperview().offset(15)
+        }
+        self.minAlphaValueLabel.snp.remakeConstraints { make in
+            make.top.equalTo(self.minAlphaTitleLabel.snp.top)
+            make.leading.equalTo(self.minAlphaTitleLabel.snp.trailing).offset(4)
+        }
+        self.minAlphaControl.snp.remakeConstraints { make in
+            make.top.equalTo(self.minAlphaTitleLabel.snp.bottom).offset(8)
+            make.leading.equalTo(self.minAlphaTitleLabel.snp.leading)
+        }
+        
+        self.maxAlphaTitleLabel.snp.remakeConstraints { make in
+            make.top.equalTo(self.minAlphaTitleLabel.snp.top)
+            make.leading.equalTo(self.minAlphaControl.snp.trailing).offset(24)
+        }
+        self.maxAlphaValueLabel.snp.remakeConstraints { make in
+            make.top.equalTo(self.maxAlphaTitleLabel.snp.top)
+            make.leading.equalTo(self.maxAlphaTitleLabel.snp.trailing).offset(4)
+        }
+        self.maxAlphaControl.snp.remakeConstraints { make in
+            make.top.equalTo(self.maxAlphaTitleLabel.snp.bottom).offset(8)
+            make.leading.equalTo(self.maxAlphaTitleLabel.snp.leading)
+        }
+        
+        self.minWidthTitleLabel.snp.remakeConstraints { make in
+            make.top.equalTo(self.minAlphaControl.snp.bottom).offset(31)
+            make.leading.equalTo(self.minAlphaTitleLabel.snp.leading)
+        }
+        self.minWidthValueLabel.snp.remakeConstraints { make in
+            make.top.equalTo(self.minWidthTitleLabel.snp.top)
+            make.leading.equalTo(self.minWidthTitleLabel.snp.trailing).offset(4)
+        }
+        self.minWidthControl.snp.remakeConstraints { make in
+            make.top.equalTo(self.minWidthTitleLabel.snp.bottom).offset(8)
+            make.bottom.equalToSuperview().offset(-20)
+            make.leading.equalTo(self.minWidthTitleLabel.snp.leading)
+        }
+        
+        self.maxWidthTitleLabel.snp.remakeConstraints { make in
+            make.top.equalTo(self.minWidthTitleLabel.snp.top)
+            make.leading.equalTo(self.minAlphaControl.snp.trailing).offset(24)
+        }
+        self.maxWidthValueLabel.snp.remakeConstraints { make in
+            make.top.equalTo(self.minWidthTitleLabel.snp.top)
+            make.leading.equalTo(self.maxWidthTitleLabel.snp.trailing).offset(4)
+        }
+        self.maxWidthControl.snp.remakeConstraints { make in
+            make.top.equalTo(self.maxWidthTitleLabel.snp.bottom).offset(8)
+            make.bottom.equalToSuperview().offset(-20)
+            make.leading.equalTo(self.maxWidthTitleLabel.snp.leading)
+        }
+    }
+    
+    private func setConstraintsForPhone() {
         self.pressureVSVelocityControl.snp.remakeConstraints { make in
             make.top.equalToSuperview().offset(20)
             make.leading.equalToSuperview().offset(15)
