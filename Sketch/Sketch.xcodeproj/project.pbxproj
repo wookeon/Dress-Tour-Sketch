@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56397C4329782CA200517D7C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56397C4229782CA200517D7C /* HeaderView.swift */; };
 		56898C962976D32700AF1D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56898C952976D32700AF1D62 /* AppDelegate.swift */; };
 		56898C9A2976D32700AF1D62 /* SketchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56898C992976D32700AF1D62 /* SketchViewController.swift */; };
 		56898C9F2976D32800AF1D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56898C9E2976D32800AF1D62 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56397C4229782CA200517D7C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		56898C922976D32700AF1D62 /* Sketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sketch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56898C952976D32700AF1D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56898C992976D32700AF1D62 /* SketchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				56898CDD2976DFDD00AF1D62 /* SettingView.swift */,
+				56397C4229782CA200517D7C /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56898CDE2976DFDD00AF1D62 /* SettingView.swift in Sources */,
+				56397C4329782CA200517D7C /* HeaderView.swift in Sources */,
 				56898CE12977FAD900AF1D62 /* UIView+Preview.swift in Sources */,
 				56898CE32977FB1A00AF1D62 /* UIViewController+Preview.swift in Sources */,
 				56898C9A2976D32700AF1D62 /* SketchViewController.swift in Sources */,

@@ -12,6 +12,7 @@ import SnapKit
 
 class SketchViewController: UIViewController {
     
+    private let headerView = HeaderView()
     private let settingView = SettingView()
     
     
@@ -24,11 +25,16 @@ class SketchViewController: UIViewController {
     
     private func setup() {
         self.view.addSubview(self.settingView)
+        self.view.addSubview(self.headerView)
     }
     
     private func setConstraints() {
-        self.settingView.snp.remakeConstraints { make in
+        self.headerView.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.equalToSuperview()
+        }
+        self.settingView.snp.remakeConstraints { make in
+            make.top.equalTo(self.headerView.snp.bottom)
             make.leading.trailing.equalToSuperview()
         }
     }
